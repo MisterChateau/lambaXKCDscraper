@@ -1,0 +1,26 @@
+{
+  "name": "soucoupe-menu",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/lambda.ts",
+  "scripts": {
+    "start": "ts-node src/lambda",
+    "build": "rm -rf dist && tsc",
+    "package": "npm run build && npm run package:install && npm run -s package:chrome && npm run package:zip",
+    "package:install": "cp package.json dist && cd dist && PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1 npm install --production",
+    "package:chrome": "cp chrome/headless_shell.tar.gz dist",
+    "package:zip": "cd dist && zip -rq ../package.zip ."
+  },
+  "author": "Dhaya Benmessaoud",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^1.11.0",
+    "tar": "^4.4.8"
+  },
+  "devDependencies": {
+    "@types/puppeteer": "^1.11.1",
+    "@types/tar": "^4.0.0",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2"
+  }
+}

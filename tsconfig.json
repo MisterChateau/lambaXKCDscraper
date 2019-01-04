@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"lib": ["es2016", "dom"],
+		"moduleResolution": "node",
+		"rootDir": "src",
+		"outDir": "dist",
+		"target": "es5",
+		"stripInternal": true,
+		"newLine": "LF",
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"strictNullChecks": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true
+	},
+	"include": [
+		"src/**/*.ts",
+		"test/**/*.ts"
+	]
+}
