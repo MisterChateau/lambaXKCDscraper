@@ -1,0 +1,35 @@
+service: soucoupe
+
+app: soucoupe
+tenant: dhaya
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: eu-west-3
+  memorySize: 2048
+  timeout: 60
+  versionFunctions: false
+  environment:
+    LOCAL_CHROME: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+    PAGE_URL: https://mobile.facebook.com/pages/category/Coffee-Shop/Caf%C3%A9-Soucoupe-991973480815330/
+    PAGE_ARTICLES: 5
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+layers:
+  chrome:
+    path: chrome
+    description: Headless shell archive
+
+functions:
+  menu:
+    handler: soucoupe.menu
+    events:
+      - http:
+          method: get
+          path: menu
+    layers:
+      - {Ref: ChromeLambdaLayer}

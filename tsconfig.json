@@ -2,9 +2,8 @@
 	"compilerOptions": {
 		"lib": ["es2016", "dom"],
 		"moduleResolution": "node",
-		"rootDir": "src",
-		"outDir": "dist",
-		"target": "es5",
+		"target": "es6",
+		"sourceMap": true,
 		"stripInternal": true,
 		"newLine": "LF",
 		"noUnusedLocals": true,
@@ -17,7 +16,9 @@
 		"emitDecoratorMetadata": true
 	},
 	"include": [
-		"src/**/*.ts",
-		"test/**/*.ts"
+		"**/*.ts"
+	],
+	"exclude": [
+		"node_modules"
 	]
 }

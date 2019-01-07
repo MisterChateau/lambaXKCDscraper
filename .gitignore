@@ -1,7 +1,7 @@
 # Directories
-dist
+.serverless
+.webpack
 node_modules
-package.zip
 
 # Files
 .DS_Store
