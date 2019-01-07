@@ -1,6 +1,6 @@
 {
   "name": "soucoupe-menu",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Serverless method for retrieving the daily menu of a Parisian café",
   "main": "soucoupe.js",
   "scripts": {
