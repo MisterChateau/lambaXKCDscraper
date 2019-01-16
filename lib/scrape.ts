@@ -42,7 +42,7 @@ export const scrape = async (url: string, numArticles: number = 5) => {
 					const time = article.dataset.ft!.match(/publish_time.+?(\d+)/)![1];
 					return {
 						created_time: new Date(parseInt(time) * 1000).toISOString(),
-						message: (article.querySelector('[data-ad-preview]') as HTMLElement).innerText,
+						message: (article.querySelector('.story_body_container > div') as HTMLElement).innerText,
 					};
 				});
 			});
