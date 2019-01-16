@@ -1,26 +1,21 @@
 {
-  "name": "soucoupe-menu",
+  "name": "xkcd-today",
   "version": "0.1.0",
-  "description": "Serverless method for retrieving the daily menu of a Parisian café",
-  "main": "soucoupe.js",
+  "description": "Serverless method for retrieving the daily xkcd comic",
+  "main": "xkcd.js",
   "scripts": {
     "start": "serverless offline",
     "deploy": "serverless deploy"
   },
-  "author": "Dhaya Benmessaoud <dhaya.benmessaoud+github@gmail.com>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/dhayab/soucoupe-menu.git"
-  },
   "license": "MIT",
   "dependencies": {
-    "bufferutil": "^4.0.1",
-    "puppeteer": "^1.11.0",
-    "tar": "^4.4.8",
-    "utf-8-validate": "^5.0.2"
+    "cheerio": "^1.0.0-rc.2",
+    "node-fetch": "^2.3.0",
+    "ts-node": "^8.0.2"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.17",
+    "@types/cheerio": "^0.22.10",
     "@types/node": "^10.12.18",
     "@types/puppeteer": "^1.11.1",
     "@types/tar": "^4.0.0",
